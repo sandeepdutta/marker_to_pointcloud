@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>marker_to_pointcloud</name>
+  <version>0.1.0</version>
+  <description>ROS 2 package to convert visualization_msgs/Marker messages to sensor_msgs/PointCloud2 messages.</description>
+  <maintainer email="your_email@example.com">Your Name</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  
+  <build_depend>rclcpp</build_depend>
+  <build_depend>rclcpp_components</build_depend>
+  <build_depend>visualization_msgs</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+
+  <exec_depend>rclcpp</exec_depend>
+  <exec_depend>rclcpp_components</exec_depend>
+  <exec_depend>visualization_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+    <rclcpp_components>
+      <node plugin="marker_to_pointcloud::MarkerToPointCloud"
+            base_class_type="rclcpp::Node"/>
+    </rclcpp_components>
+  </export>
+</package>
